@@ -15,5 +15,7 @@ project "Armadillo"
 
         if os.is( "windows" ) == false then
             links "pthread"
+        else
+            links "shlwapi.lib"
         end
     ]]
