@@ -1,5 +1,5 @@
 
-project "Armadillo"
+project "Benchmark"
 
     kind "StaticLib"
 
