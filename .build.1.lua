@@ -5,6 +5,8 @@ project "Armadillo"
 
     files "src/*.cc"
 
+    removefiles "src/re_posix.cc"
+
     zpm.export [[
         includedirs "include/"
         flags "C++11"
