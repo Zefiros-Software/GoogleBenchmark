@@ -1,0 +1,13 @@
+{
+    "name": "Zefiros-Software/Armadillo-Dev",
+    "requires": [
+        {
+            "name": "Zefiros-Software/GoogleTest",
+            "version": "@head"
+        },
+        {
+            "name": "Zefiros-Software/GoogleBenchmark",
+            "version": "@head"
+        }
+    ]
+}
