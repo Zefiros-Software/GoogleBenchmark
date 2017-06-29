@@ -13,11 +13,14 @@ export: |
             includedirs "include/"
             cppdialect "C++11"
 
-            defines "HAVE_STD_REGEX"
+            defines {
+              "HAVE_STD_REGEX",
+              "BENCHMARK_HAS_CXX11"
+            }
 
             filter "system:not windows"
                 links "pthread"
-                
+
             filter "system:windows"
                 links "shlwapi.lib"
         ]]
