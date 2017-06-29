@@ -1,0 +1,23 @@
+version: ">0.0.0 || @head"
+export: |
+
+    project "Benchmark"
+
+        kind "StaticLib"
+
+        files "src/*.cc"
+
+        removefiles "src/re_posix.cc"
+
+        zpm.export [[
+            includedirs "include/"
+            cppdialect "C++11"
+
+            defines "HAVE_STD_REGEX"
+
+            filter "system:not windows"
+                links "pthread"
+                
+            filter "system:windows"
+                links "shlwapi.lib"
+        ]]
