@@ -25,14 +25,8 @@
 -- ]]
 
 workspace "Benchmark"
-   configurations { "Test" }
-
-   startproject "Benchmark"
+   
+    zefiros.testDefinition("Benchmark")
 
     project "Benchmark"
-        kind "ConsoleApp"
-        files "main.cpp"
-
-        zpm.uses {
-            "Zefiros-Software/GoogleBenchmark"
-        }
+        zpm.uses "Zefiros-Software/GoogleBenchmark"
