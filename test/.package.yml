@@ -1,3 +1,7 @@
 modules:
   - name: Zefiros-Software/Defaults
     version: '@head'
+libraries:
+  - name: Zefiros-Software/GoogleBenchmark
+    version: '@head'
+    definition: ../
