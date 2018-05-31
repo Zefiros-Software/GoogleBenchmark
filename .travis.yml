@@ -13,12 +13,12 @@ matrix:
     language: generic
 global:
   env:
-  - PROJECT=GoogleBenchmark
+  - PROJECT=Benchmark
   - PROJECT_TEMPLATE=default
 install:
 - source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
 script:
-- cd test && zpm run test-definition GoogleBenchmark
+- cd test && zpm run test-definition Benchmark
 notifications:
   slack:
     secure: LURQYbHAZNpktE/ffu7yJmZ2nPUXOhNuc2cseYOOaTgMuRhiRZW+Ix/7z2Moux/vqgYS3tjMJkhQlNuiI2TTzOtPmMvP5FBODpwQ/Wecc0JxLY8tTy+M8n18rZjVslCFdm+QENswknBlLsrWNCGx8K1awjjsrn5A5rF4xHqzuHwK9++PzWPnl0lBmEyyP46oFSTt2cPbGmUN3d0PzNl5xkl1Kzgp8BdvfRPbigaWlaycbm+yD6luMLP09ARGtYfGiDqeV2GAaBEjeZYoxlU+uH5uOIhLRBM5QJ7Mqvxia/bvujQAfqPQlbOKQCshNmSnvGejyySQRGHJMJPify5qlkaYckk72x5WZPS2zHtKFO1JNJcNmNW17UyyWrtOh8svto6N0+1JTJJEkwitY9nQNxdAo1I5dKCJeRJixqDH69MCq1G9+BxSmtJ5V22LKRkpDrOB5YWersQ/vtWeJX/Qi1Kqu6F3TPogsUaxKjZMpJu3bK2ZdTNnrQI/a7gZp60XkcSVG/nWVKH3oKrQtWu+Feue8uSl13jZBC+RVFLwf+G1hHy3PjPsfIe5ZQYIdMjrebJJPuFUbSd1m8CqUlwZUlr1KQut5zrALOdnXbjkixJbvcS+fMmlfmfbSklzHDfYZs+avk7BnsaO2/NRjwEuiAn7tRYYA9OkuWieN8dgGJ8=
