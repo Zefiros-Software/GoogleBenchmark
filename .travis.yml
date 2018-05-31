@@ -8,16 +8,17 @@ matrix:
   - os: linux
     dist: trusty
     env: VERSION=7
-  - os: linux
-    dist: trusty
-    env: VERSION=5
   - os: osx
-    osx_image: xcode8
+    osx_image: xcode9.2
     language: generic
+global:
+  env:
+  - PROJECT=GoogleBenchmark
+  - PROJECT_TEMPLATE=default
 install:
-- source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/features/refactor/script/install-zpm.sh)"
+- source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/dev/script/install-zpm.sh)"
 script:
-- cd test && zpm run test-definition Benchmark
+- cd test && zpm run test-definition GoogleBenchmark
 notifications:
   slack:
-    secure: DNH4oklgrQmJvZowp6ASeVIj44hxiqzL0cuQlvmJ7FtjRByjHMWzfCNQeNQ6IcDjkVAnHhmuJK6WpEPQaT6bEg2BowqZbRkNSq5oeC4N6sz50huZ7TY8qNeT4XtdKDkFuGdqVNqepVUHN4CaVa5bVlmA3pwR0wW6i1g33y3Z6tFJJowAchiyYCnmZzaTdEeDTDc3h6WkLIBf8SDnoL6fWcsDqozQHjeQ1eGz4jnkywYW9Jh4Kn3bf+r7b3mnkN1343RwT9tL1XtU575wkkJfyAaj7xdGNhg5NwqO/gF/qRdrRoFtTQinA2rsqmpi5JoqEVev3/p8Hppmu3OQW8cGz2hOjEXjt2+BGGHTsIapM0LhmnyXg9rH4XdPXhKn+8uB4siMoTEIBlofijsc5o2PcscviELvrGhGrdgBOkqwtv9ltGAeyDA+/WCkYWkeQ0JnuHrK4XVwXHHmvgEva1pHTW4jI9PvGOQ/dVxKisdfcnZPanq/Y3ytuLhIHqZz8m5uh8WbLkyszXT+C45Tk066/QK3fEYjviYU1kyMusiSjCUZPoMDkyJwoIvo0GXzTdN/z2nY8uH//iAjRXawJ0Ttlv92uwDC676eBdRJWAc2jT97hEruOB8Y0bzS6lWcy4yUn3YQFBfsidCvFinU1xYwt+92R5hy5AflwTRJtdY6LtM=
+    secure: LURQYbHAZNpktE/ffu7yJmZ2nPUXOhNuc2cseYOOaTgMuRhiRZW+Ix/7z2Moux/vqgYS3tjMJkhQlNuiI2TTzOtPmMvP5FBODpwQ/Wecc0JxLY8tTy+M8n18rZjVslCFdm+QENswknBlLsrWNCGx8K1awjjsrn5A5rF4xHqzuHwK9++PzWPnl0lBmEyyP46oFSTt2cPbGmUN3d0PzNl5xkl1Kzgp8BdvfRPbigaWlaycbm+yD6luMLP09ARGtYfGiDqeV2GAaBEjeZYoxlU+uH5uOIhLRBM5QJ7Mqvxia/bvujQAfqPQlbOKQCshNmSnvGejyySQRGHJMJPify5qlkaYckk72x5WZPS2zHtKFO1JNJcNmNW17UyyWrtOh8svto6N0+1JTJJEkwitY9nQNxdAo1I5dKCJeRJixqDH69MCq1G9+BxSmtJ5V22LKRkpDrOB5YWersQ/vtWeJX/Qi1Kqu6F3TPogsUaxKjZMpJu3bK2ZdTNnrQI/a7gZp60XkcSVG/nWVKH3oKrQtWu+Feue8uSl13jZBC+RVFLwf+G1hHy3PjPsfIe5ZQYIdMjrebJJPuFUbSd1m8CqUlwZUlr1KQut5zrALOdnXbjkixJbvcS+fMmlfmfbSklzHDfYZs+avk7BnsaO2/NRjwEuiAn7tRYYA9OkuWieN8dgGJ8=
