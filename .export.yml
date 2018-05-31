@@ -10,7 +10,7 @@ export: |
         removefiles "src/re_posix.cc"
 
         zpm.export [[
-            includedirs "include/"
+            includedirs "include"
             cppdialect "C++11"
 
             defines {
